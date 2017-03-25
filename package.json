@@ -1,12 +1,11 @@
 {
   "name": "styleapp",
   "version": "1.0.0",
-  "description": "react app for saving and display NYT artices",
+  "description": "StyleApp",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "webpack & node server"
+    "test": "node server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
