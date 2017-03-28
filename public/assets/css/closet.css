@@ -177,6 +177,11 @@ background-image: url('../img/paris-background.jpg');
 overflow:auto;
 }
 
+.magazine: {
+    height: 500px;
+    overflow:scroll;
+}
+
 .target {
     position:absolute;
 }

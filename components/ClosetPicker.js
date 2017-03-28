@@ -336,12 +336,13 @@ if (this.props.flair){
          message = "File Successfully Saved";
       }
       return (
-         <section className="closet-container">
+
+<section className="closet-container">
         
-            <div id='clothesSet' className="col-md-6 closet-block rel"> 
+    <div id='clothesSet' className="col-md-6 closet-block rel"> 
 
         <div className="clothes-items backdrop" style={{ overflow: 'hidden', clear: 'both' }}>
- {clothesbins.map(({ accepts, lastDroppedItem, className }, index) =>
+              {clothesbins.map(({ accepts, lastDroppedItem, className }, index) =>
           
              <Clothesbin
                accepts={accepts}
@@ -350,46 +351,46 @@ if (this.props.flair){
                key={index}
              />,
            )}
-        </div>
-
-         <button onClick={(e) => this.handleClick(e)}  className="btn btn-primary outline round btn-lg">Save</button>
-        <button onClick={this.resetClothesbins} className="btn btn-primary outline round btn-lg">Reset</button>       
-
       </div>
-      <div className="col-md-6 closet-block rel">
+
+         <button onClick={(e) => this.handleClick(e)}  className="btn btn-pink outline round btn-lg">Save</button>
+        <button onClick={this.resetClothesbins} className="btn btn-pink outline round btn-lg">Reset</button>       
+
+    </div>
+    <div className="col-md-6 closet-block rel">
         <div className="row">
-        <div className="form-group">
-        {error}
-        <label for="sel1">Select list Item Type, then upload file:</label>
-        <select class="form-control" ref={ref => this.closetItemType = ref} onChange={(e) => this.handleItemType(e)} id="closetItemType">
-          <option defaultValue="selected" value="SELECT">SELECT</option>
-          <option id="bottom" value="bottom">BOTTOM</option>
-          <option id="top" value="top">TOP</option>
-          <option id="dress" value="dress">DRESS</option>
-          <option id="bag" value="bag">BAG</option>
-          <option id="accessory" value="accessory">ACCESSORY</option>
-          <option id="flair" value="flair">FLAIR</option>
-          <option id="shoes" value="shoes">SHOES</option>
-        </select>
-      </div> 
+          <div className="form-group">
+              {error}
+            <label for="sel1">Select list Item Type, then upload file:</label>
+                <select class="form-control" ref={ref => this.closetItemType = ref} onChange={(e) => this.handleItemType(e)} id="closetItemType">
+                    <option defaultValue="selected" value="SELECT">SELECT</option>
+                    <option id="bottom" value="bottom">BOTTOM</option>
+                    <option id="top" value="top">TOP</option>
+                    <option id="dress" value="dress">DRESS</option>
+                    <option id="bag" value="bag">BAG</option>
+                    <option id="accessory" value="accessory">ACCESSORY</option>
+                    <option id="flair" value="flair">FLAIR</option>
+                    <option id="shoes" value="shoes">SHOES</option>
+                </select>
+          </div> 
         <input type="file" id="siofu_input" label='Upload' accept='.png' name="file" ref="file" onChange={(e) => this.uploadFile(e)} ref = {ref => this.inputEntry = ref}/><br /> 
          {message}
-        </div>
-        <div className="row"> 
+      </div>
+      <div className="row"> 
             
-                    <div className="closet-tabs-container">
-                       <div className="clothes-items scroll-flow">
-               <ul className='nav nav-tabs nav-justified'>
+          <div className="closet-tabs-container">
+              <div className="clothes-items scroll-flow">
+                    <ul className='nav nav-tabs nav-justified'>
                 
-                <li role="presentation"><a href='#'><img src='../assets/img/i-shirt.png'></img></a></li>
-                 <li role="presentation"><img src='../assets/img/i-pants.png'></img></li>
-                 <li role="presentation"><img src='../assets/img/i-dress.png'></img></li>
-                   <li role="presentation"><img src='../assets/img/i-shoes.png'></img></li>
-                  <li role="presentation"><img src='../assets/img/i-purse.png'></img></li>
-                  <li role="presentation"><img src='../assets/img/i-accessory.png'></img></li>
-                 <li role="presentation"><img src='../assets/img/i-flair.png'></img></li>
-                 <li role="presentation"><img src='../assets/img/i-background.png'></img></li>
-                 </ul>
+                        <li role="presentation"><a href='#'><img src='../assets/img/i-shirt.png'></img></a></li>
+                        <li role="presentation"><img src='../assets/img/i-pants.png'></img></li>
+                        <li role="presentation"><img src='../assets/img/i-dress.png'></img></li>
+                        <li role="presentation"><img src='../assets/img/i-shoes.png'></img></li>
+                        <li role="presentation"><img src='../assets/img/i-purse.png'></img></li>
+                        <li role="presentation"><img src='../assets/img/i-accessory.png'></img></li>
+                        <li role="presentation"><img src='../assets/img/i-flair.png'></img></li>
+                        <li role="presentation"><img src='../assets/img/i-background.png'></img></li>
+                    </ul>
                          {/*<ul className="nav nav-tabs"> 
                         <div className="row">*/}
                             {/*<li>Shoes</li>*/}
@@ -419,24 +420,24 @@ if (this.props.flair){
                             {/*<li>Bottoms</li>*/}
                             {bottomResults}
 
-                        </div>
-                  </ul>    
-                  <ul>
-                    <Magazine />
-                  </ul>
+              </div>
+          <div className="magazine">        
+              <ul>
+                <Magazine />
+              </ul>
+          </div>
 
-
-                        <div id="gallery">
+                  <div id="gallery">
                         
-                        {/*{clothesImages}*/}
-                         <div style={{ overflow: 'hidden', clear: 'both' }}>
-                            //this is where the sets will go?
-                       
-                    </div>
+
+                    {/*{clothesImages}*/}
+                    <div style={{ overflow: 'hidden', clear: 'both' }}>//this is where the sets will go?</div>
+                </div>
+
             </div>
+        </div>
    
     </div>
-</div>
 </section>
       )
    }
